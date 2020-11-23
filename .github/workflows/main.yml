@@ -43,6 +43,8 @@ jobs:
         fetch-depth: 1
         ref: master
         path: ${{ env.MX_PATH }}
+    - name: Setup Python
+      uses: actions/setup-python@v2.1.4
     - name: Get JDK
       env: ${{ matrix.env }}
       run: |
