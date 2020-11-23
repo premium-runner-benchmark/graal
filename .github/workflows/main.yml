@@ -29,6 +29,11 @@ jobs:
               PRIMARY: "substratevm"
 
     steps:
+    - uses: |
+        sudo add-apt-repository ppa:git-core/ppa -y
+        sudo apt-get update
+        sudo apt-get install git -y
+        git --version
     - uses: actions/checkout@v2
       with:
         fetch-depth: 1
