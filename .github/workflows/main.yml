@@ -18,7 +18,7 @@ env:
 jobs:
   build-graalvm:
     name: ${{ matrix.env.JDK }} ${{ matrix.env.GATE }} ${{ matrix.env.PRIMARY }} ${{ matrix.env.WITHOUT_VCS }}
-    runs-on: [f64s]
+    runs-on: [f64s,m5Large,e2s2]
     strategy:
       fail-fast: false
       matrix:
